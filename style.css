@@ -1,4 +1,15 @@
 article {
+    --popout: minmax(0, 2rem);
+    --full: minmax(var(--gap), 1fr);
+
     max-width: 65ch;
     margin-inline: auto;
+
+    display: grid;
+    grid-template-columns:
+    [full-start] var(--full)
+    [popout-start] var(--popout)
+
+
 }
+
