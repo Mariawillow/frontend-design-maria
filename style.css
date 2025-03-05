@@ -1,15 +1,30 @@
 article {
+    /* --gap: clamp(1rem, 6vw, 3rem);
     --popout: minmax(0, 2rem);
-    --full: minmax(var(--gap), 1fr);
+    --full: minmax(var(--gap), 1fr); */
+
 
     max-width: 65ch;
     margin-inline: auto;
 
-    display: grid;
+    /* display: grid;
     grid-template-columns:
     [full-start] var(--full)
     [popout-start] var(--popout)
 
-
+    var(--popout) [popout-end]
+    var(--full) [full-end]; */
 }
+
+/* article > * {
+    grid-column: content;
+  }
+
+.popout {
+    grid-column: popout;
+  }
+
+  .full {
+    grid-column: full;
+  } */
 
