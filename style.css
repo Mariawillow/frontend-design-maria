@@ -1,2 +1,27 @@
 /* Dine styles her */
-article {}
+/* The space is 1em by default, so if the font size is larger, there will be more space. */
+
+
+/* Standard margin: Alle elementer inde i article får en vertikal margin-top på 0.5rlh, med mulighed for at overskrive den via --flow-space. */
+/* Alle direkte børn af articel får margin-top */
+article > * {
+    /* rlh står for "Root Line Height"  */
+    margin-top: var(--flow-space, 0.5rlh);
+  }
+  
+  /* h2 får en --flow-space på 2rlh.*/
+  /* Når et <h2> findes i article, overskrives --flow-space og sættes til 2rlh. */
+  article h2 {
+    --flow-space: 2rlh;
+  }
+  /* h3 får en --flow-space på 1rlh. */
+
+  article h3 {
+    --flow-space: 1rlh;
+  }
+  /* Reduceret afstand efter h3: Hvis et element kommer lige efter h3, sættes --flow-space til 0.25rlh. */
+  
+  /* Elementer der kommer lige efter et h3 (h3 + *). */
+  article h3 + * {
+    --flow-space: 0.25rlh;
+  }
