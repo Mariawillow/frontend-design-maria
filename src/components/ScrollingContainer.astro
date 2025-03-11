@@ -21,12 +21,16 @@ const { cardContent } = Astro.props;
     /* Overflot-x sørger for at vi kan scroll kun på det given område, her på x-aksen */
     overflow-x: auto;
     list-style: none;
+    padding-inline: max(20px, 50% - var(--content-width) / 2);
+    scroll-padding-inline-start: (20px, 50% - var(--content-width) / 2);
+    scroll-snap-type: inline mandatory;
 
     gap: var(--card-gap);
 
     li {
       flex-basis: min(50%, 400%);
       flex-shrink: 0;
+      scroll-snap-align: center;
 
       background-color: var(--card-background);
       padding: var(--card-padding);
