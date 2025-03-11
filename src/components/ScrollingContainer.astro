@@ -15,11 +15,19 @@ const { cardContent } = Astro.props;
 
 <style>
   ul {
-    list-style: none;
+    /* \fylder hele vejen hen */
+    grid-column: 1 /-1;
     display: flex;
+    /* Overflot-x sørger for at vi kan scroll kun på det given område, her på x-aksen */
+    overflow-x: auto;
+    list-style: none;
+
     gap: var(--card-gap);
 
     li {
+      flex-basis: min(50%, 400%);
+      flex-shrink: 0;
+
       background-color: var(--card-background);
       padding: var(--card-padding);
       color: var(--card-text-color);

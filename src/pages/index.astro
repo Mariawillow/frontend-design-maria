@@ -36,10 +36,11 @@ import { cardContent } from "../data/card-content.js";
 <style>
   main {
     padding-block: 4rem; /* Kun af æstetiske årsager */
-    padding: min(3rem, 5%);
-    width: min(65ch, 100% - 2rem);
-
+    padding: 3rem;
+    margin-inline: auto;
     header {
+      width: var(--content-width);
+
       padding: min(5rem, 5%);
 
       h2 {
@@ -48,6 +49,7 @@ import { cardContent } from "../data/card-content.js";
     }
   }
   section {
-    width: var(--content-width);
+    display: grid;
+    grid-template-columns: 1fr [content];
   }
 </style>
